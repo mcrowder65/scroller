@@ -12,6 +12,9 @@ const LeftBlock = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 600px) {
+    width: 100px;
+  }
   :focus {
     background-color: lightblue;
   }
@@ -31,10 +34,16 @@ const Left = styled.div`
   }
 `
 const Right = styled.div`
+  height: 1000px;
+  top: 80px;
   position: sticky;
   position: -webkit-sticky;
-  height: 400px;
-  top: 80px;
+  @media (min-height: 800px) {
+    height: 400px;
+    top: 80px;
+    position: sticky;
+    position: -webkit-sticky;
+  }
 
   > div {
     margin-bottom: 4px;
